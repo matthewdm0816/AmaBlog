@@ -16,43 +16,43 @@ updatedAt: "2021-3-23"
 1. [`MSYS2`](https://www.msys2.org)首页上就有下载链接, 直接下载安装即可.
 2. 安装后就可以在开始菜单里找到MSYS2虚拟环境了(还附送了MinGW32/64)
 3. 但是谁会喜欢黑底白字还是宋体的英文呢? 建议配合Windows Terminal食用, [这里](https://www.msys2.org/docs/terminals/)有和WT配合的文档, 具体来讲, 在Windows Terminal里的设置中如下的修改, 不用重启WT就能在其中新建MSYS2标签页了!
-    -   ```JSON
-        "defaultProfile": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
-        "profiles": {
-        "list":
-        [
-            // ...(你原来的shells, 如CMD/PS)
-            {
-            "guid": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
-            "name": "MINGW64 / MSYS2",
-            "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -mingw64",
-            "startingDirectory": "C:/msys64/home/%USERNAME%",
-            "icon": "C:/msys64/mingw64.ico",
-            "fontFace": "Lucida Console",
-            "fontSize": 9
-            },
-            {
-            "guid": "{2d51fdc4-a03b-4efe-81bc-722b7f6f3820}",
-            "name": "MINGW32 / MSYS2",
-            "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -mingw32",
-            "startingDirectory": "C:/msys64/home/%USERNAME%",
-            "icon": "C:/msys64/mingw32.ico",
-            "fontFace": "Lucida Console",
-            "fontSize": 9
-            },
-            {
-            "guid": "{71160544-14d8-4194-af25-d05feeac7233}",
-            "name": "MSYS / MSYS2",
-            "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -msys",
-            "startingDirectory": "C:/msys64/home/%USERNAME%",
-            "icon": "C:/msys64/msys2.ico",
-            "fontFace": "Lucida Console",
-            "fontSize": 9
-            },
-            // ...
-        ]
-        }
-        ```
+    ```JSON
+    "defaultProfile": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
+    "profiles": {
+    "list":
+    [
+        // ...(你原来的shells, 如CMD/PS)
+        {
+        "guid": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
+        "name": "MINGW64 / MSYS2",
+        "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -mingw64",
+        "startingDirectory": "C:/msys64/home/%USERNAME%",
+        "icon": "C:/msys64/mingw64.ico",
+        "fontFace": "Lucida Console",
+        "fontSize": 9
+        },
+        {
+        "guid": "{2d51fdc4-a03b-4efe-81bc-722b7f6f3820}",
+        "name": "MINGW32 / MSYS2",
+        "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -mingw32",
+        "startingDirectory": "C:/msys64/home/%USERNAME%",
+        "icon": "C:/msys64/mingw32.ico",
+        "fontFace": "Lucida Console",
+        "fontSize": 9
+        },
+        {
+        "guid": "{71160544-14d8-4194-af25-d05feeac7233}",
+        "name": "MSYS / MSYS2",
+        "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -msys",
+        "startingDirectory": "C:/msys64/home/%USERNAME%",
+        "icon": "C:/msys64/msys2.ico",
+        "fontFace": "Lucida Console",
+        "fontSize": 9
+        },
+        // ...
+    ]
+    }
+    ```
 4. 现在你就可以在WT中打开并使用MSYS2了! Give it a try!
 5. Note: 在MSYS2(MinGW同样)中, 你的原磁盘文件都会被翻译成Linux风格的路径!
    - e.g.: `C:\path\to\file => /c/path/to/file` 
